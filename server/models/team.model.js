@@ -8,6 +8,9 @@ const PlayerSchema = new mongoose.Schema({
 	},
 	position: {
 		type: String
+	},
+	status: {
+		type: String
 	}
 }, {timestamps: true, versionKey: false});
 // above we add createdat and modifiedat fields to the mongo record and remove the versionKey (__v)
