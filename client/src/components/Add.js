@@ -39,7 +39,7 @@ const PlayerForm = (props) => {
 			}
 			<Form.Label>Player position: </Form.Label>
 			<Form.Control className="box" type="text" name= "position" defaultValue={position} onChange = {(e)=>setPosition(e.target.value)} />
-			<Button variant="primary"  onClick={ createPlayer }>Create Player</Button>
+			<Button variant="success"  onClick={ createPlayer }>Create Player</Button>
 		</div>
 	)
 }
