@@ -5,6 +5,7 @@ import PlayerForm from '../components/Add';
 const AddPlayer = () => {
 	const [ player, setPlayer ] = useState("");
 	const [ position, setPosition ] = useState("");
+
 	return (
 		<div className='wrapper'>
 			{/* This is the same everywhere */}

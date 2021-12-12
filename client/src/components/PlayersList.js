@@ -43,7 +43,7 @@ const PlayersList = (props) => {
 									{<Link className="list" to={"/player/"+ player._id} >{player.position}</Link>}
 								</td>
 								<td>
-									{<Link className="list" to={"/player/"+ player._id} ><Button variant="primary" >Edit</Button></Link>}
+									{/* {<Link className="list" to={"/player/"+ player._id} ><Button variant="primary" >Edit</Button></Link>} */}
 									< Delete playerId={player._id} afterDelete={getPlayers}/>
 								</td>
 							</tr>
