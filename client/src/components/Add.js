@@ -34,7 +34,7 @@ const PlayerForm = (props) => {
 			<Form.Control className="box" type="text" name= "player" defaultValue={player} onChange = {(e)=>setPlayer(e.target.value)} />
 			{
 				errors.name
-				? <p>{errors.name.message}</p>
+				? <p style={{color:"red"}}>{errors.name.message}</p>
 				: null
 			}
 			<Form.Label>Player position: </Form.Label>

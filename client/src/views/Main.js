@@ -7,7 +7,7 @@ const Main = () => {
 		<div className='wrapper'>
 			{/* This is the same everywhere */}
 			< Link to="/players/list" >List</Link> 
-			< Link to="/players/addplayer">Add Players</Link> 
+			< Link to="/players/addplayer">Add Player</Link> 
 			{/* < PlayersList component here */}
 			< PlayersList /> 
 		</div>

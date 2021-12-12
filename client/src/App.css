@@ -1,18 +1,25 @@
 .App {
   text-align: center;
-  background-color: grey;
+  background-color: rgb(187, 187, 187);
   min-height: 100vh;
 }
 
 a{
   font-size: larger;
-  margin: 10px;
+  margin: 20px;
+}
+
+.playersList{
+  margin: 15px;
+  align-content: center;
 }
 
 .wrapper{
   background-color: white;
   border: solid black 3px;
-  width: 750px;
+  margin: auto;
+  width: 70%;
+  padding: 10px;
 }
 
 .App-logo {

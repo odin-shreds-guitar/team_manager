@@ -10,7 +10,7 @@ const AddPlayer = () => {
 		<div className='wrapper'>
 			{/* This is the same everywhere */}
 			< Link to="/players/list" >List</Link> 
-			< Link to="/players/addplayer">Add Players</Link> 
+			< Link to="/players/addplayer">Add Player</Link> 
 			{/* < Add Player component here */}
 			<h2>Add Player</h2>
 			< PlayerForm 
