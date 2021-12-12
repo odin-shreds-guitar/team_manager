@@ -6,7 +6,7 @@ const PlayerSchema = new mongoose.Schema({
 		required: [true, "A name is required here."],
 		minlength: [ 2, "A name must be longer than 2 characters. Unlike Paul Simon, you cannot call me Al"]
 	},
-	preferredPosition: {
+	position: {
 		type: String
 	}
 }, {timestamps: true, versionKey: false});

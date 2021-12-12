@@ -1,23 +1,18 @@
-import logo from './logo.svg';
+import { Router, Link } from '@reach/router';
+import Main from './views/Main';
 import './App.css';
+import AddPlayer from './components/AddPlayer';
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      {/* These are always present */}
+    	< Link to="/players/list" >Manage Players</Link> 
+			< Link to="/status/game/1">Manage Player Status</Link> 
+      < Router>
+          < Main default path="/players/list"/>
+          < AddPlayer path="/players/addplayer" />
+      </Router>
     </div>
   );
 }

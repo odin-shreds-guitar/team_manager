@@ -1,17 +1,15 @@
 import React from 'react';
 import { Link } from '@reach/router';
-import PlayersList from '../components/PlayersList';
 
-const Main = () => {
+const AddPlayer = () => {
 	return (
 		<div className='wrapper'>
 			{/* This is the same everywhere */}
 			< Link to="/players/list" >List</Link> 
 			< Link to="/players/addplayer">Add Players</Link> 
-			{/* < PlayersList component here */}
-			< PlayersList /> 
+			{/* < Add Player component here */}
 		</div>
 	)
 }
 
-export default Main;
+export default AddPlayer;
