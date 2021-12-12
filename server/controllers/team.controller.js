@@ -31,10 +31,8 @@ module.exports.findOnePlayer = ( request, response ) => {
 // create player
 module.exports.createPlayer = ( request, response ) => {
 	console.log("Creating a single player...");
-	// only needing a name
-	const { name } = request.body;
-	// all validation is coming from the backend server 
-	Player.create({ name })
+	// all validation is coming from the backend server model
+	Player.create(request.body)
 		.then((player) => response.json(player))
 		.catch((err) => {
 			response.status(400).json(err)
