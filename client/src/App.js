@@ -1,7 +1,7 @@
 import { Router, Link } from '@reach/router';
 import Main from './views/Main';
 import './App.css';
-import AddPlayer from './components/AddPlayer';
+import AddPlayer from './views/AddPlayer';
 
 function App() {
   return (
