@@ -2,6 +2,7 @@ import { Router, Link } from '@reach/router';
 import Main from './views/Main';
 import './App.css';
 import AddPlayer from './views/AddPlayer';
+import Status from './views/Status';
 
 function App() {
   return (
@@ -14,6 +15,7 @@ function App() {
       < Router>
           < Main default path="/players/list"/>
           < AddPlayer path="/players/addplayer" />
+          < Status path="/status/game/1"/>
       </Router>
     </div>
   );

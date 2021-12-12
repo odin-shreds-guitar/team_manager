@@ -3,8 +3,8 @@ const mongoose = require('mongoose');
 const PlayerSchema = new mongoose.Schema({
 	name: { 
 		type: String, 
-		required: [true, "A name is required here."],
-		minlength: [ 2, "A name must be longer than 2 characters. Unlike Paul Simon, you cannot call him Al"]
+		required: [true, "A player's name is required."],
+		minlength: [ 2, "A player's name must be longer than 2 characters."]
 	},
 	position: {
 		type: String
