@@ -37,10 +37,10 @@ const PlayersList = (props) => {
 						return (
 							<tr key={index}>
 								<td>
-									{<Link className="list" to={"/player/"+ player._id} >{player.name}</Link>}
+									{player.name}
 								</td>
 								<td>
-									{<Link className="list" to={"/player/"+ player._id} >{player.position}</Link>}
+									{player.position}
 								</td>
 								<td>
 									{/* {<Link className="list" to={"/player/"+ player._id} ><Button variant="primary" >Edit</Button></Link>} */}
