@@ -6,8 +6,10 @@ const Main = () => {
 	return (
 		<div className='wrapper'>
 			{/* This is the same everywhere */}
-			< Link to="/players/list" >List</Link> 
-			< Link to="/players/addplayer">Add Player</Link> 
+			<div className="links-bar">
+				< Link to="/players/list">List</Link>
+				< Link to="/players/addplayer">Add Player</Link>
+			</div>
 			{/* < PlayersList component here */}
 			< PlayersList /> 
 		</div>

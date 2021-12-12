@@ -7,8 +7,10 @@ function App() {
   return (
     <div className="App">
       {/* These are always present */}
-    	< Link to="/players/list" >Manage Players</Link> 
-			< Link to="/status/game/1">Manage Player Status</Link> 
+    	<div className='links-bar'>
+        < Link to="/players/list" >Manage Players</Link> 
+              < Link to="/status/game/1">Manage Player Status</Link>
+      </div>
       < Router>
           < Main default path="/players/list"/>
           < AddPlayer path="/players/addplayer" />

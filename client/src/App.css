@@ -18,8 +18,18 @@ a{
   background-color: white;
   border: solid black 3px;
   margin: auto;
+  margin-left: 30px;
   width: 70%;
   padding: 10px;
+}
+
+.links-bar{
+  display: flex;
+  align-content: left;
+  margin: 10px;
+  margin-top: 0;
+  font-size: 1.25em;
+  width: 100%;
 }
 
 .App-logo {
