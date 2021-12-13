@@ -21,27 +21,29 @@ const Delete = (props) => {
 			.catch((err) => {console.log(err)})
 	}
 	return (
-		<>
-		<Button variant="danger" onClick={() => setShow(true)}>
-			Delete
-		</Button>
+        <>
+            <Button variant="danger" onClick={() => setShow(true)}>
+                Delete
+            </Button>
 
-		<Modal show={show} onHide={handleClose}>
-        <Modal.Header closeButton>
-        <Modal.Title>Deleting Player</Modal.Title>
-        </Modal.Header>
-        <Modal.Body>Are you sure you want to delete this player?</Modal.Body>
-        <Modal.Footer>
-        <Button variant="secondary" onClick={handleClose}>
-            No
-        </Button>
-		<Button variant="primary" onClick={deleteHandler}>
-			Yes
-		</Button>
-        </Modal.Footer>
-    	</Modal>
-	</>
-	)
+            <Modal show={show} onHide={handleClose}>
+                <Modal.Header closeButton>
+                    <Modal.Title>Deleting Player</Modal.Title>
+                </Modal.Header>
+                <Modal.Body>
+                    Are you sure you want to delete this player?
+                </Modal.Body>
+                <Modal.Footer>
+                    <Button variant="secondary" onClick={handleClose}>
+                        No
+                    </Button>
+                    <Button variant="primary" onClick={deleteHandler}>
+                        Yes
+                    </Button>
+                </Modal.Footer>
+            </Modal>
+        </>
+    );
 }
 
 export default Delete;
