@@ -7,7 +7,6 @@ const Delete = (props) => {
 	const [show, setShow] = useState(false);
 
 	const handleClose = () => setShow(false);
-	const handleShow = () => setShow(true);
 	
 	const deleteHandler = () => {
 		console.log(playerId)
@@ -16,6 +15,8 @@ const Delete = (props) => {
 			.then((res) => {
 				console.log("Player " + res.data.name + " successfully deleted")
 				afterDelete(playerId)
+				// forcing the modal to close due to some off behavior with it not closing
+				handleClose()
 			})
 			.catch((err) => {console.log(err)})
 	}
@@ -34,7 +35,7 @@ const Delete = (props) => {
         <Button variant="secondary" onClick={handleClose}>
             No
         </Button>
-		<Button variant="primary" onClick={handleClose, deleteHandler}>
+		<Button variant="primary" onClick={deleteHandler}>
 			Yes
 		</Button>
         </Modal.Footer>
