@@ -1,20 +1,24 @@
 import React, {useState, useEffect} from 'react'
 import axios from 'axios';
-import { Link } from "@reach/router";
-import{ Button, Table } from 'react-bootstrap';
+import{ Table } from 'react-bootstrap';
 import Delete from './Delete';
 
-const PlayersList = (props) => {
+
+const PlayersList = () => {
 	const [ players, setPlayers ] = useState([]);
 
 	// this is used in both the Delete and useEffect
 	const getPlayers = () => {
 		axios.get('http://localhost:8000/api/team-manager/')
 		.then(response => {
-			setPlayers(response.data)
+			// inline sorting of the response.data
+			setPlayers(response.data.sort((a,b) => (a.name > b.name)? 1 : ((b.name > a.name ) ? -1 : 0)))
 		})
 		.catch(err => console.log(`Couldn't load the list of players` + err))	
 	}
+
+
+	
 
 
 	useEffect(() => {			
@@ -43,7 +47,6 @@ const PlayersList = (props) => {
 									{player.position}
 								</td>
 								<td>
-									{/* {<Link className="list" to={"/player/"+ player._id} ><Button variant="primary" >Edit</Button></Link>} */}
 									< Delete playerId={player._id} afterDelete={getPlayers}/>
 								</td>
 							</tr>
