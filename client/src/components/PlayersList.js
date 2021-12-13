@@ -18,13 +18,10 @@ const PlayersList = () => {
 	}
 
 
-	
-
-
 	useEffect(() => {			
 		getPlayers()
 	},[])
-
+	
 
 	return (
 		<div className="playersList">
