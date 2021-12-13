@@ -1,11 +1,9 @@
 import React, { useState } from 'react';
 import { Link } from '@reach/router';
-import PlayerForm from '../components/Add';
-import PlayersList from '../components/PlayerStatus';
+import PlayersListFromStatus from '../components/PlayerStatus';
 
 const Status = () => {
 	const [ player, setPlayer ] = useState("");
-	const [ position, setPosition ] = useState("");
 
 	return (
 		<div className='wrapper'>
@@ -17,7 +15,7 @@ const Status = () => {
 			</div>
 			{/* < Add Player component here */}
 			<h2>Add Player</h2>
-			< PlayersList 
+			< PlayersListFromStatus 
 				player= { player }
 				setPlayer =  { setPlayer }
 			/>
